@@ -21,7 +21,8 @@ Struktura folderów (w folderze dist).
         Znajduje się tutaj plik z przykładowymi danymi uczniów (DaneTestoweCHATGPT.xlsx). Ten plik służy jako przykład, jak dane powinny być formatowane i strukturyzowane dla aplikacji.
         Folder zawiera również inne foldery, w których aplikacja będzie zapisywać wygenerowane dokumenty. To właśnie tutaj znajdziesz wygenerowane Skierowania i Wykazy po ich stworzeniu przez aplikację.
 
-W repozytorium oprócz folderu dist znajdują się jeszcze foldery Aplikacja i Data zawierają one pliki źródłowe aplikacji(język Python). Nie są one wymagane do działania programu ale umożliwiajają wprowadzenie zmian w programie.
+
+W repozytorium oprócz folderu "dist" znajdują się jeszcze folder "src" z folderami Aplikacja i Data zawierają one pliki źródłowe aplikacji(język Python). Nie są one wymagane do działania programu ale umożliwiajają wprowadzenie zmian w programie.
 
 Kontakt:
 piotr.debowski@zseiulaziska.pl
