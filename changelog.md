@@ -3,7 +3,7 @@
 ## [0.37] - 2024-10-04
 
 ### Naprawiono
-- obsługę wielowontkowego generowania plików pdf (pogram powinien być bardzie responsywny).
+- obsługę wielowątkowego generowania plików pdf (pogram powinien być bardzie responsywny).
 - naprawiono zliczanie plików w katalogach. Na przyciskach do generowania pdf wyświetla się liczba plików DOCX w nie wszystkich.
 
 ### Zmieniono
