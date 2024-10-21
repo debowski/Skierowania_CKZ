@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.38] - 2024-10-21 
+### Zmieniono
+- Zmieniono adres w szablonach dokumentów (szablon_skierowania_v3.docx oraz szablon_wykaz_v3.docx).
+
+
 ## [0.38] - 2024-10-09
 ### Dodano
 - Obsługę braku uczniów w wybranym zawodzie w dane klasie - Wyświetla się napis "Brak danych".
