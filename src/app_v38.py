@@ -1,20 +1,20 @@
 import json
 import os
-import subprocess
+# import subprocess
 import sys
 import threading
 import pythoncom
 import tkinter as tk
-import concurrent.futures
+# import concurrent.futures
 
 # import tkinter.ttk as ttk
 from tkinter import StringVar, filedialog
 import openpyxl
 import ttkbootstrap as ttkb
-from docx import Document
+# from docx import Document
 from docx2pdf import convert
 from docxtpl import DocxTemplate
-from pathlib import Path
+# from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -308,11 +308,11 @@ class App:
 
         # Znajdź indeksy dla wszystkich potrzebnych kolumn
         try:
-            imie_idx = headers.index("Imię")
-            drugie_imie_idx = headers.index("Drugie imię")
-            nazwisko_idx = headers.index("Nazwisko")
-            pesel_idx = headers.index("PESEL")
-            data_urodzenia_idx = headers.index("Data urodzenia")
+            #imie_idx = headers.index("Imię")
+            #drugie_imie_idx = headers.index("Drugie imię")
+            #nazwisko_idx = headers.index("Nazwisko")
+            #pesel_idx = headers.index("PESEL")
+            #data_urodzenia_idx = headers.index("Data urodzenia")
             oddzial_idx = headers.index("Dane oddziału")
             zawod_idx = headers.index("Specjalność/Zawód")
         except ValueError as e:
@@ -323,11 +323,11 @@ class App:
             min_row=2
         ):  # Pomija nagłówki, zaczynając od drugiego wiersza
             # Pobieranie danych z kolumn
-            imie = row[imie_idx].value
-            drugie_imie = row[drugie_imie_idx].value
-            nazwisko = row[nazwisko_idx].value
-            pesel = row[pesel_idx].value
-            data_urodzenia = row[data_urodzenia_idx].value
+            # imie = row[imie_idx].value
+            # drugie_imie = row[drugie_imie_idx].value
+            # nazwisko = row[nazwisko_idx].value
+            # pesel = row[pesel_idx].value
+            # data_urodzenia = row[data_urodzenia_idx].value
             klasa = row[oddzial_idx].value.split()[0][
                 0
             ]  # Pobiera pierwszy znak z kolumny "Dane oddziału"
@@ -408,20 +408,27 @@ class App:
         wb = openpyxl.load_workbook(open(plik, "rb"), read_only=True)
         sheet = wb.active
 
-        # Odczytaj pierwszy wiersz (nagłówki)
-        headers = [cell.value for cell in sheet[1]]
 
-        # Znajdź indeksy dla wszystkich potrzebnych kolumn
-        try:
-            imie_idx = headers.index("Imię")
-            drugie_imie_idx = headers.index("Drugie imię")
-            nazwisko_idx = headers.index("Nazwisko")
-            pesel_idx = headers.index("PESEL")
-            data_urodzenia_idx = headers.index("Data urodzenia")
-            oddzial_idx = headers.index("Dane oddziału")
-            zawod_idx = headers.index("Specjalność/Zawód")
-        except ValueError as e:
-            raise ValueError(f"Nie znaleziono wymaganej kolumny: {e}")
+        # ======================================================================
+
+        # # Odczytaj pierwszy wiersz (nagłówki)
+        # headers = [cell.value for cell in sheet[1]]
+
+        # # Znajdź indeksy dla wszystkich potrzebnych kolumn
+        # try:
+        #     imie_idx = headers.index("Imię")
+        #     drugie_imie_idx = headers.index("Drugie imię")
+        #     nazwisko_idx = headers.index("Nazwisko")
+        #     pesel_idx = headers.index("PESEL")
+        #     data_urodzenia_idx = headers.index("Data urodzenia")
+        #     oddzial_idx = headers.index("Dane oddziału")
+        #     zawod_idx = headers.index("Specjalność/Zawód")
+        # except ValueError as e:
+        #     raise ValueError(f"Nie znaleziono wymaganej kolumny: {e}")
+
+
+        # ======================================================================
+
 
         # # Iteruj przez wiersze (pomijając nagłówek)
         # for row in sheet.iter_rows(
@@ -668,7 +675,7 @@ class App:
 
         # informacja zwrotna
         self.wynik.configure(text=f"Utworzono: {str(linia + 1)} dokumentów")
-        folder_path_skierowania = os.path.join(self.app_dir, "Data", "Skierowania")
+        # folder_path_skierowania = os.path.join(self.app_dir, "Data", "Skierowania")
 
         total_files_skierowania = self.zlicz_plik_docx(
             os.path.join(self.app_dir, "Data", "Skierowania")

@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.39] - 2024-11-29
+### Zmieniono
+- zakomentowane zostały zbędne biblioteki i przypisania do niepotrzebnych zmiennych
+- dodano do pliku kompilacja import potrzebnych bibliotek do kompilacji za pomoc PyInstallera
+
 ## [0.38] - 2024-10-21 
 ### Zmieniono
 - Zmieniono adres w szablonach dokumentów (szablon_skierowania_v3.docx oraz szablon_wykaz_v3.docx).
