@@ -1,1 +1,1 @@
-python -m PyInstaller  --add-data ".\src\zawody.json;." --add-data ".\src\Data;Data" --add-data ".\src\Szablony;Szablony" --hidden-import=pythoncom --hidden-import=pywintypes .\src\app_v39.py
+python -m PyInstaller -y --noconsole --collect-all customtkinter --add-data ".\src\zawody.json;." --add-data ".\src\Data;Data" --add-data ".\src\Szablony;Szablony" .\src\app_v41.py
